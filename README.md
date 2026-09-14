@@ -1,13 +1,3 @@
-# Playlist Chaos
-
-Your AI assistant tried to build a smart playlist generator. The app runs, but some of the behavior is unpredictable. Your task is to explore the app, investigate the code, and use an AI assistant to debug and improve it.
-
-This activity is your first chance to practice AI-assisted debugging on a codebase that is slightly messy, slightly mysterious, and intentionally imperfect.
-
-You do not need to understand everything at once. Approach the app as a curious investigator, work with an AI assistant to explain what you find, and make targeted improvements.
-
----
-
 ## How the code is organized
 
 ### `app.py`  
@@ -35,7 +25,11 @@ You will need to look at both files to understand how the app behaves.
 
 ---
 
-## What you will do
+## What was fixed
+
+1. search_songs - this function had issues with the search feature. Certain text was unable to find what was intended. The fix was to search with query in value instead of the opposite.  We are thus able to find bands such as AC/DC with searching AC.
+2. compute_playlist_stats - fixed the hype ratio as the ratio will now use the total number of songs by the Hype count and restricts this ratio always being 1.0 which is what it was stagnant as before.
+3. compute_playlist_stats - there was also an error with the avg_energy calculation as it was summing just hype songs instead of summing all song energies. 
 
 ### 1. Explore the app  
 
